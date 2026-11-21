@@ -1,0 +1,38 @@
+:root {
+  --copper: #963e12;
+  --rule: #e2d5c9;
+  --paper: #fcf9f5;
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; }
+a:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #175b83;
+  outline-offset: 3px;
+}
+.hero-grid { min-height: clamp(350px, 36vw, 510px); }
+.hero h1 { color: #703716; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.48; letter-spacing: -.025em; }
+.hero h1 span { background: none; }
+.hero .eyebrow { color: var(--copper); }
+.hero .button, .button, a.button { border-radius: 8px; background: var(--copper); color: white; box-shadow: none; }
+.hero .button:hover, .button:hover { background: #74310f; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; }
+.consult-link { display: inline-flex; align-items: center; min-height: 44px; color: #18583b; font-weight: 700; text-underline-offset: .25em; }
+.quick { border-radius: 12px; overflow: hidden; background: var(--paper); border-color: var(--rule); }
+.quick strong, .price, .total { font-variant-numeric: tabular-nums; }
+.section { padding-block: clamp(36px, 5vw, 72px); }
+.section > .wrap > h2 { font-size: clamp(24px, 2.5vw, 34px); letter-spacing: -.02em; }
+.section > .wrap > h2:after { width: 32px; height: 2px; background: var(--copper); }
+.plan, .service-card, .flow-step, .task-time-card, .panel { border-radius: 12px; border-color: var(--rule); box-shadow: none; }
+.line-live { background: #187146; box-shadow: none; }
+.line-live:hover { background: #125737; }
+#social .button { color: #623f2c; background: white; border: 1px solid var(--rule); }
+body:has(#calculator) { background: var(--paper); }
+#calculator > .panel { background: white; }
+#calculator select { min-height: 48px; }
+@media (max-width: 700px) {
+  .hero-grid { min-height: 300px; }
+  .hero-actions { gap: 0 14px; }
+  .quick > div { padding-block: 14px; }
+  .section { scroll-margin-top: 10px; }
+  .sticky-cta { padding-bottom: max(10px, env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
